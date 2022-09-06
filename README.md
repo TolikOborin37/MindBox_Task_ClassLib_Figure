@@ -23,4 +23,9 @@
 
 ## Выполнение
 - так как к одному продукту может быть много категорий и в одной категории может быть много продуктов, то существует промежуточная таблица для связи многие - ко многим.
--
+![image](https://user-images.githubusercontent.com/79850716/188659671-b7165724-d16f-4528-aea0-65e33c4a8721.png)
+- Тогда запрос будет выглядить следующим образом:
+<p>select p.ProductName[Продукты],c.CategoryName[Категории] from Product as p</p>
+<p>left join  ProductCategory as pc ON p.ProductId=pc.productId</p>
+<p>left join Category as c ON pc.CategoryId = c.CategoryId</p>
+
